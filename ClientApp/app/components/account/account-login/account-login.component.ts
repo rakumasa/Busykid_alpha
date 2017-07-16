@@ -2,17 +2,18 @@
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'account-detail',
-    templateUrl: './account-detail.component.html'
+    selector: 'account-login',
+    templateUrl: './account-login.component.html',
+    styleUrls: ['./account-login.component.css']
 })
-export class AccountDetailComponent {
+export class AccountLoginComponent {
 
     constructor(private router: Router) {
 
     }
 
-    navigateToDetail(user) {
-        this.router.navigate(["account"]);
+    navigateToDetail() {
+        this.router.navigate(["account"])
     }
 
     navigateToList() {
