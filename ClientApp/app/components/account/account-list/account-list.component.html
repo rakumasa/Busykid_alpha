@@ -5,7 +5,7 @@
     <div class="col-lg-6">
         <div class="input-group">
             <label>First name/Last name/Email</label>
-            <input type="text" class="form-control" placeholder="Search for...">
+            <input type="text" class="form-control" placeholder="Search for..." [(ngModel)]="query">
         </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->
@@ -21,7 +21,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let user of users" class="active">
+        <tr *ngFor="let user of users | search: 'firstname': query" class="active">
             <td>{{user.id}}</td>
             <td>{{user.firstname | uppercase}}</td>
             <td>{{user.lastname}}</td>

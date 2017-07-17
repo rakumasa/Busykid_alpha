@@ -1,5 +1,6 @@
 ﻿import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Pipe, PipeTransform } from '@angular/core';
 
 
 @Component({

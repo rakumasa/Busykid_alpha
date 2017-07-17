@@ -7,6 +7,8 @@ import { AccountSummaryComponent } from './components/account/account-summary/ac
 import { AccountDetailComponent } from './components/account/account-detail/account-detail.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { AccountLoginComponent } from './components/account/account-login/account-login.component';
+import { SearchPipe } from './filter/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 export const sharedConfig: NgModule = {
     bootstrap: [AppComponent],
@@ -17,10 +19,11 @@ export const sharedConfig: NgModule = {
         AccountSummaryComponent,
         HomeComponent,
         HeaderComponent,
-        AccountLoginComponent
+        AccountLoginComponent,
+        SearchPipe
     ],
     imports: [
-
+        FormsModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'login', pathMatch: 'full' },
             { path: 'account', component: AccountListComponent },
